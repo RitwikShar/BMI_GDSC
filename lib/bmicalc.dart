@@ -459,6 +459,10 @@ class _BmiCalcState extends State<BmiCalc> {
                       count = 0;
                       containerCol = const Color.fromARGB(255, 233, 229, 229);
                       containerCol2 = const Color.fromARGB(255, 233, 229, 229);
+                      inchcol=const Color.fromARGB(255, 233, 229, 229);
+                      kgcol=const Color.fromARGB(255, 233, 229, 229);
+                      metcol=const Color.fromARGB(255, 233, 229, 229);
+                      lbscol=const Color.fromARGB(255, 233, 229, 229);
                     },
                     child: Container(
                       width: 150,
@@ -537,29 +541,29 @@ class _BmiCalcState extends State<BmiCalc> {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding: const EdgeInsets.only(left: 25, top: 20),
-                child: Column(
+                child: const Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         // ignore: prefer_const_literals_to_create_immutables
                         children: [
-                          const Text(
+                          Text(
                             'Category',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 16),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 170,
                           ),
-                          const Text(
+                          Text(
                             'BMI Range',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 16),
                           ),
                         ],
                       ),
-                      const Padding(padding: EdgeInsets.only(top: 10)),
+                      Padding(padding: EdgeInsets.only(top: 10)),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -567,133 +571,133 @@ class _BmiCalcState extends State<BmiCalc> {
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Severely Underweight',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 90),
-                              const Text(
+                              SizedBox(width: 90),
+                              Text(
                                 '< 16',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Underweight',
                                 style: TextStyle(
                                   fontSize: 18,
                                 ),
                               ),
-                              const SizedBox(width: 160),
-                              const Text(
+                              SizedBox(width: 160),
+                              Text(
                                 '16-17',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Slightly Underweight',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 90),
-                              const Text(
+                              SizedBox(width: 90),
+                              Text(
                                 '17-18.5',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Normal',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 200),
-                              const Text(
+                              SizedBox(width: 200),
+                              Text(
                                 '18-25',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Slightly Overweight',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 110),
-                              const Text(
+                              SizedBox(width: 110),
+                              Text(
                                 '25-30',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Overweight ',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 165),
-                              const Text(
+                              SizedBox(width: 165),
+                              Text(
                                 '30-35',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Severely Overweight',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 100),
-                              const Text(
+                              SizedBox(width: 100),
+                              Text(
                                 '35-40',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 8,
                           ),
                           Row(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              const Text(
+                              Text(
                                 'Obese',
                                 style: TextStyle(fontSize: 18),
                               ),
-                              const SizedBox(width: 210),
-                              const Text(
+                              SizedBox(width: 210),
+                              Text(
                                 '> 40',
                                 style: TextStyle(fontSize: 18),
                               ),
@@ -701,9 +705,15 @@ class _BmiCalcState extends State<BmiCalc> {
                           ),
                         ],
                       ),
-                    ]),
-              ),
-              const Padding(padding: EdgeInsets.only(bottom: 20))
-            ]))));
+                    ]
+                  ),
+                ),
+                const Padding(padding: EdgeInsets.only(bottom: 20)
+              )
+            ]
+          )
+        )
+      )
+    );
   }
 }
